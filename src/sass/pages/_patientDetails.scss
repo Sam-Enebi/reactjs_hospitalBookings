@@ -1,0 +1,81 @@
+.patientDetails {
+  &__body {
+    display: flex;
+    justify-content: center;
+    margin-top: 6rem;
+    &__box {
+      background-color: $SECONDARY_COLOR;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 2px 2px 15px rgba(255, 255, 255, 0.2);
+      width: 800px;
+      &__heading {
+        color: white;
+        text-align: center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+      Button {
+        text-transform: capitalize;
+        // color: black;
+        // background-color: white !important;
+        padding: 0px 0px;
+        float: right;
+      }
+      &__contents {
+        display: flex;
+        flex-direction: column;
+        &__patientName {
+          color: white;
+          margin: .5rem 0;
+        }
+        &__patientProfile {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          color: $LIGHT_WHITE;
+          @media (max-width: 450px) {
+            display: flex;
+            flex-direction: column;
+          }
+          &__boxLeft {
+            display: flex;
+            flex-direction: column;
+            span {
+              margin: .5rem ;
+              padding-left: .5rem;
+            }
+          }
+          &__boxRight {
+            display: flex;
+            flex-direction: column;
+            span {
+              margin: .5rem ;
+              padding-right:.5rem;
+              padding-left:.5rem;
+            }
+          }
+        }
+        &__riskDetails {
+          display: flex;
+          flex-direction: column;
+          &__patientRisk {
+            color: white;
+            margin-top: 2rem;
+            margin-bottom: .5rem;
+          }
+          &__container {
+            display: flex;
+            flex-direction: column;
+            color: $LIGHT_WHITE;
+            margin: .5rem;
+            span {
+              margin-bottom: 1rem;
+              padding-left: .5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,359 @@
+/* We are using nod-sass lib to convert our sass code into css */
+/* we need to start script "npm run sass" to start compile scss to css */
+
+body {
+  box-sizing: border-box;
+  background-color: #0d47a1;
+}
+@media (max-width: 56.25em) {
+  body {
+    padding: 0;
+  }
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+*:not(i),
+*::after:not(i),
+*::before:not(i) {
+  font-family: "Poppins", sans-serif;
+}
+
+.centered {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999999;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #002171;
+  box-shadow: 0 4px 2px -2px rgba(255, 255, 255, 0.2);
+}
+.navbar__logoutButton {
+  text-transform: capitalize !important;
+  background-color: white !important;
+  color: black !important;
+  border-radius: 5px !important;
+  padding: 1px 10px !important;
+}
+
+.authentication {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.authentication__box {
+  background-color: #002171;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 1rem 1rem;
+  width: 400px;
+  box-shadow: 2px 2px 15px rgba(255, 255, 255, 0.2);
+}
+@media (max-width: 400px) {
+  .authentication__box {
+    width: 350px;
+  }
+}
+.authentication__box__heading {
+  text-align: center;
+  color: white;
+  margin: 0.5rem 0 0 0;
+}
+.authentication__box h4 {
+  text-align: center;
+  color: white;
+  margin-bottom: 1rem;
+}
+.authentication__box__form {
+  display: flex;
+  flex-direction: column;
+}
+.authentication__box__form__label {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  padding-left: 0.2rem;
+}
+.authentication__box__form__input {
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+.authentication__box__form__buttonBox {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.authentication__box__form__buttonBox__button {
+  border-radius: 10px !important;
+  background-color: white !important;
+  color: black !important;
+  text-transform: capitalize !important;
+  padding: 5px 15px !important;
+}
+.authentication__box__registerBox {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.authentication__box__registerBox p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+.authentication__box__registerBox__link {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+.authentication__box__registerBox__link:hover {
+  text-decoration: underline;
+}
+
+.patients__body {
+  display: flex;
+  justify-content: center;
+  margin-top: 6rem;
+}
+.patients__body__box {
+  background-color: #002171;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 2px 2px 15px rgba(255, 255, 255, 0.2);
+  width: 800px;
+}
+.patients__body__box__heading {
+  color: white;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+.patients__body__box__addPatient {
+  display: flex;
+  justify-content: flex-end;
+}
+@media (max-width: 450px) {
+  .patients__body__box__addPatient {
+    display: flex;
+    justify-content: center;
+  }
+}
+.patients__body__box__addPatient Button {
+  text-transform: capitalize;
+  padding: 2px 10px;
+  font-weight: bold;
+}
+.patients__body__box__contents {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 0.5px solid rgba(255, 255, 255, 0.8);
+  padding: 1rem 0.5rem 0 0.5rem;
+  margin-bottom: 1rem;
+}
+.patients__body__box__contents p {
+  color: rgba(255, 255, 255, 0.8);
+  width: auto;
+  font-size: 1.1rem;
+}
+@media (max-width: 450px) {
+  .patients__body__box__contents p {
+    font-size: 1rem !important;
+  }
+}
+.patients__body__box__contents__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+.patients__body__box__contents__buttons Button:nth-child(1) {
+  margin-right: 5px;
+  background-color: white !important;
+  color: black !important;
+}
+.patients__body__box__contents__buttons Button:nth-child(2) {
+  margin-right: 5px;
+}
+.patients__body__box__contents__buttons Button {
+  padding: 0 5px;
+  text-transform: capitalize !important;
+}
+@media (max-width: 450px) {
+  .patients__body__box__contents__buttons Button {
+    font-size: 0.7rem !important;
+    margin-bottom: 3px;
+    margin-right: 3px !important;
+  }
+}
+
+.patientDetails__body {
+  display: flex;
+  justify-content: center;
+  margin-top: 6rem;
+}
+.patientDetails__body__box {
+  background-color: #002171;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 2px 2px 15px rgba(255, 255, 255, 0.2);
+  width: 800px;
+}
+.patientDetails__body__box__heading {
+  color: white;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.patientDetails__body__box Button {
+  text-transform: capitalize;
+  padding: 0px 0px;
+  float: right;
+}
+.patientDetails__body__box__contents {
+  display: flex;
+  flex-direction: column;
+}
+.patientDetails__body__box__contents__patientName {
+  color: white;
+  margin: 0.5rem 0;
+}
+.patientDetails__body__box__contents__patientProfile {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 0.8);
+}
+@media (max-width: 450px) {
+  .patientDetails__body__box__contents__patientProfile {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.patientDetails__body__box__contents__patientProfile__boxLeft {
+  display: flex;
+  flex-direction: column;
+}
+.patientDetails__body__box__contents__patientProfile__boxLeft span {
+  margin: 0.5rem;
+  padding-left: 0.5rem;
+}
+.patientDetails__body__box__contents__patientProfile__boxRight {
+  display: flex;
+  flex-direction: column;
+}
+.patientDetails__body__box__contents__patientProfile__boxRight span {
+  margin: 0.5rem;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+.patientDetails__body__box__contents__riskDetails {
+  display: flex;
+  flex-direction: column;
+}
+.patientDetails__body__box__contents__riskDetails__patientRisk {
+  color: white;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+.patientDetails__body__box__contents__riskDetails__container {
+  display: flex;
+  flex-direction: column;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0.5rem;
+}
+.patientDetails__body__box__contents__riskDetails__container span {
+  margin-bottom: 1rem;
+  padding-left: 0.5rem;
+}
+
+.addPatient__body {
+  display: flex;
+  justify-content: center;
+  margin-top: 6rem;
+}
+.addPatient__body__box {
+  background-color: #002171;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 2px 2px 15px rgba(255, 255, 255, 0.2);
+  width: 800px;
+}
+.addPatient__body__box__heading {
+  color: white;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.addPatient__body__box__formContainer {
+  display: flex;
+  justify-content: center;
+}
+.addPatient__body__box__formContainer__form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  width: 400px;
+}
+@media (max-width: 400px) {
+  .addPatient__body__box__formContainer__form {
+    width: 350px;
+  }
+}
+.addPatient__body__box__formContainer__form__label {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  padding-left: 0.2rem;
+}
+.addPatient__body__box__formContainer__form__input {
+  margin-bottom: 0.5rem;
+  outline: none;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+}
+.addPatient__body__box__formContainer__form__buttonBox {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.addPatient__body__box__formContainer__form__buttonBox__button {
+  border-radius: 10px !important;
+  background-color: white !important;
+  text-transform: capitalize !important;
+  padding: 5px 15px !important;
+  color: black !important;
+}
+.addPatient__body__box__buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+.addPatient__body__box__buttons Button {
+  padding: 0;
+  margin-top: 1.5rem;
+  text-transform: capitalize;
+}
